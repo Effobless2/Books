@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <link rel = "stylesheet"
+    href = "{{ url_for('static', filename='home.css') }}">
+  <title>Les Livres</title>
+</head>
+<body>
+  <h1>Les Livres</h1>
+  <ul>
+    {% for livre in books %}
+    <li>{{ livre.title }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
