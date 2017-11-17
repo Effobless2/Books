@@ -1,17 +1,10 @@
-<!doctype html>
-<html>
-<head>
-  <link rel = "stylesheet"
-    href = "{{ url_for('static', filename='home.css') }}">
-  <title>{{title}}</title>
-</head>
-<body>
-  <h1>{{title}}</h1>
+{% extends "base.html" %}
+{% block main %}
   <a href="{{ url_for('books') }}">Les Livres</a>
+  <h1>Les Gens</h1>
   <ul>
     {% for x in names %}
     <li>{{ x }}</li>
     {% endfor %}
   </ul>
-</body>
-</html>
+{% endblock %}
