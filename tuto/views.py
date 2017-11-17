@@ -13,5 +13,6 @@ def home():
 def books():
     return render_template(
         "books.html",
+        title = "Les Livres",
         books = get_sample()
     )

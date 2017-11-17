@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block main %}
   <a href="{{ url_for('home') }}">Accueil</a>
-  <h1>Les Livres</h1>
   <ul>
     {% for livre in books %}
     <li>{{ livre.title }}</li>
