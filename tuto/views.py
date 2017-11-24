@@ -16,3 +16,9 @@ def books():
         title = "Les Livres",
         books = get_sample()
     )
+
+from flask_bootstrap import Bootstrap
+
+app.config['BOOTSTRAP_SERVE_LOCAL'] = True
+
+Bootstrap(app)

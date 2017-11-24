@@ -4,6 +4,7 @@
   <ul>
     {% for livre in books %}
     <li>{{ livre.title }}</li>
+    <img src = "{{url_for('static', filename = 'images/'+livre.img) }}"/>
     {% endfor %}
   </ul>
 {% endblock %}
