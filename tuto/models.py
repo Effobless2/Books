@@ -26,6 +26,9 @@ class Book(db.Model):
 def get_sample():
     return Book.query.limit(10).all()
 
+def get_authors():
+    return Author.query.limit(10).all()
+
 
 # print("Version YAML")
 

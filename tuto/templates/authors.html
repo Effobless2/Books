@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block main %}
 <ul>
-  {% a in authors %}
+  {% for a in authors %}
   <li> {{a.name}} </li>
   {% endfor %}
 </ul>

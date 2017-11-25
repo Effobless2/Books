@@ -1,6 +1,6 @@
 from .app import app
 from flask import render_template
-from .models import get_sample
+from .models import get_sample, get_authors
 
 @app.route("/")
 def home():
@@ -16,6 +16,15 @@ def books():
         title = "Les Livres",
         books = get_sample()
     )
+
+@app.route("/authors/")
+def authors():
+    return render_template(
+        "authors.html",
+        title = "Les Autheurs",
+        authors = get_authors()
+    )
+
 
 from flask_bootstrap import Bootstrap
 
